@@ -2,6 +2,12 @@
 
 日期：2026-10-16（Asia/Shanghai）
 
+## 云端迁移准备验证
+
+已增加 `tools/setup-cloud.sh`，在本机 Ubuntu WSL2 实际执行成功：检查现有工具、完成 SDK 检查、下载 Gradle Wrapper 分发包，执行单元测试、主 APK / 测试 APK 构建与 lint，最终输出 BUILD SUCCESSFUL。此环境已有 JDK 和安卓缓存，不等于全新 Codex Cloud 环境已验证；缺失系统包的 apt 安装分支未实际触发。
+
+源码目标仓库为 https://github.com/thlxl/fund-assistant 。排除 dist/、构建缓存、local.properties、数据库及签名密钥。用户选择稍后自行配置云端账号界面，因此当前未创建或发布 Codex Cloud 环境。
+
 ## 通过
 
 - WSL Ubuntu / JDK 17 / Android SDK 35 / Gradle 8.9 工具链安装完成。
